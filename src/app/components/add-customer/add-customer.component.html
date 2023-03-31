@@ -1,0 +1,27 @@
+<div class="main-block">
+    <h1><b>ADD NEW CUSTOMER</b></h1>
+    <form action="/">
+        <hr>
+        <label id="icon" for="id">I</label>
+        <input type="text" name="id" id="id" placeholder="C123, C222" required [(ngModel)]="id"/>
+        <br>
+        <br>
+        <label id="icon" for="name">N</label>
+        <input type="text" name="name" id="name" placeholder="Name - Ramesh, Suresh" required [(ngModel)]="name"/>
+        <br>
+        <br>
+        <label id="icon" for="phoneNumber">P</label>
+        <input type="number" name="phoneNumber" id="phoneNumber" placeholder="9190xxxxxx" required [(ngModel)]="phoneNumber"/>
+        <br>
+        <br>
+        <label id="icon" for="email">E</label>
+        <input type="email" name="email" id="email" placeholder="abc@xyz.com" required [(ngModel)]="email"/>
+        <hr>
+        <div class="btn-block">
+            <div class="btn-group">
+                <button class="btn btn-success" color="primary" (click)="addCustomer()">Save</button>
+                <button class="btn btn-danger" color="warn" (click)="cancelCustomer()">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,32 @@
+<p>inventory works!</p>
+
+<div class="inventory">
+<div class="heading">
+    <h4><strong>Manage Inventory</strong> <button class="btn btn-success btn-lg add">+ Add Product</button></h4>
+</div>
+
+<div class="search">
+    <label for="searchbox">
+        Search a Product : &nbsp;  
+    </label>
+    <input type="search" id="#searchBox" name="product" placeholder="Enter Product Id" >
+    <button class="btn btn-primary" (click)=displayProduct()>submit</button>
+</div>
+
+<div class="list">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Manufacturer</th>
+            <th>Price (per item)</th>
+            <th>Quantity available</th>
+            <th>Description</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+</div>

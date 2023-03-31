@@ -1,0 +1,27 @@
+.inventory{
+    background-color: rgb(223, 240, 255);
+}
+.add{
+    float: right;
+    padding: 5px;
+}
+
+.heading{
+    margin:20px;
+    padding:20px;
+    background-color: rgb(251, 250, 248);
+    box-shadow: 0 3px 10px rgb(10 10 10 / 0.2);
+}
+.list{
+    margin:20px;
+    padding:20px;
+    background-color: rgb(251, 250, 248);
+    box-shadow: 0 3px 10px rgb(10 10 10 / 0.2);
+}
+
+.search{
+    margin:20px;
+    padding:20px;
+    background-color: rgb(251, 250, 248);
+    box-shadow: 0 3px 10px rgb(10 10 10 / 0.2);
+}

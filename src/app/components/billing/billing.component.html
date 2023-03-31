@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <app-add-customer></app-add-customer>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead class="thead-dark">
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">DESCRIPTION</th>
+            <th scope="col">PRICE</th>
+            <th scope="col">QUANTITY REMAINING IN STOCK</th>
+            <th scope="col">+</th>
+            <th scope="col">-</th>
+        </thead>
+        <tbody *ngFor="let product of prod" scope="row">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.cost}}</td>
+            <td>{{product.quantity}}</td>
+            <td><button class="btn btn-primary" (click)="addToBilling(product)">ADD</button></td>
+            <td><button class="btn btn-danger" (click)="remove(product)">remove</button></td>
+        </tbody>
+    </table>
+</div>
+<br/><br/>
+
+<div id="printable">
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>PRICE</th>
+                <th>QUANTITY</th>
+                <th>P * Q</th>
+            </thead>
+            <tbody *ngFor="let prt of products">
+                <td>{{prt.id}}</td>
+                <td>{{prt.name}}</td>
+                <td>{{prt.cost}}</td>
+                <td>{{prt.quantity}}</td>
+                <td>{{prt.cost*prt.quantity}}</td>
+                <td><button class="btn btn-primary"></button></td>
+            </tbody>
+        </table>
+        <h1>Grand Total: {{grandTotal}}</h1>
+    </div>
+</div>
+
+<div>
+    <input type="button" value="PRINT RECEIPT" (click)="pushToTransaction()"/>
+</div>
+
+
+<script type="text/javascript">
+    function printDiv(divName) {
+         var printContents = document.getElementById(divName).innerHTML;
+         var originalContents = document.body.innerHTML;
+    
+         document.body.innerHTML = printContents;
+         window.print();
+         document.body.innerHTML = originalContents;
+    }
+</script>
