@@ -1,0 +1,93 @@
+#top{
+    background-color: rgb(30, 150, 4);
+    color: white;
+}
+.title{
+    padding: 10px;
+    width: 80%;
+}
+
+a{
+    text-decoration: none;
+    color:blue;
+}
+.auth{
+    width:20%;
+}
+
+.middle{
+    padding-top:20px;
+    padding-bottom:20px;
+    background-color: rgb(208, 216, 233);
+    min-height: 1000px;
+}
+.home-img{
+    width:100%;
+    height:80%;
+}
+
+#carouselExampleIndicators{
+    margin:auto;
+    width:100%;
+}
+
+.carousal-item{
+    max-height: 600px;
+}
+img{
+    max-height: 600px;
+}
+
+.bgphoto{
+    width: 100%;
+    height:100%;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.containers {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+#content-section1{
+    font-family: 'Merriweather', serif;
+    margin-top: 50px;
+    float:left;
+    width:55%;
+}
+
+#image-section1{
+    margin-top: 50px;
+    float:right;
+    width:40%;
+    border-radius: 4px;
+    opacity: 0.8; 
+    cursor: pointer;
+    filter: drop-shadow(5px 10px 5px rgb(27, 41, 27));
+}
+
+#content-section2{
+    font-family: 'Merriweather', serif;
+    /* margin-top: 50px; */
+    float:right;
+    width:50%;
+}
+
+#image-section2{
+    float:left;
+    width:40%;
+    border-radius: 4px;
+    opacity: 0.9; 
+    cursor: pointer;
+    filter: drop-shadow(5px 10px 5px rgb(95, 99, 95));
+}
+a:hover{
+    color:white;
+}
+#image-section1:hover{
+    opacity:2;
+}
+#image-section2:hover {
+    opacity: 1;
+}

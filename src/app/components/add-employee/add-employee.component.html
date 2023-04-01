@@ -1,0 +1,120 @@
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+	
+<input type="checkbox" id="checkbox">
+
+<header class="header">
+	<h2 class="u-name">
+		<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+		Supermarket Billing <b>Management</b>
+	</h2>
+	<i class="fa fa-user-o" aria-hidden="true"></i>
+</header>
+
+<div class="body">
+	<nav class="side-bar">
+		<div class="user-p">
+			<img src="../../../assets/admin.jpg">
+			<h4>Hello  admin</h4>
+		</div>
+		<ul>
+			<li routerLink="/admin-dashboard">
+				<a routerLink="/admin-dashboard">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					<span>Dashboard</span>
+				</a>
+			</li>
+			<li routerLink="/add-employee">
+				<a routerLink="/add-employee">
+					<i class="fa fa-user-circle"></i>
+					<span>Add Employee</span>
+				</a>
+			</li>
+			<li routerLink="/manage-employee">
+				<a routerLink="/manage-employee">
+					<i class="fa fa-users"></i>
+					<span>Manage Employees</span>
+				</a>
+			</li>
+			<li routerLink="/add-product">
+				<a routerLink="/add-product">
+					<i class="fa fa-plus"></i>
+					<span>Add Product</span>
+				</a>
+			</li>
+			<li href="/manage-inventory">
+				<a href="/manage-inventory">
+					<i class="fa fa-window-restore"></i>
+					<span>Inventory</span>
+				</a>
+			</li>
+			<!-- <li>
+				<a href="#">
+					<i class="fa fa-opencart"></i>
+					<span>Update Stock</span>
+				</a>
+			</li> -->
+			<li routerLink="/admin-dashboard">
+				<a routerLink="/admin-dashboard">
+					<i class="fa fa-area-chart"></i>
+					<span>Sales</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fa fa-power-off" aria-hidden="true"></i>
+					<span>Logout</span>
+				</a>
+			</li>
+		</ul>
+	</nav> 
+	
+
+    <div class="main-block">
+        <h1><b>ADD NEW EMPLOYEE</b></h1>
+        <form action="/">
+            <hr>
+            <label id="icon" for="id">I</label>
+            <input type="text" name="id" id="id" placeholder="E123, E222" required [(ngModel)]="id"/>
+            <br>
+            <br>
+            <label id="icon" for="name">N</label>
+            <input type="text" name="name" id="name" placeholder="Name - Ramesh, Suresh" required [(ngModel)]="name"/>
+            <br>
+            <br>
+            <label id="icon" for="age">A</label>
+            <input type="number" name="age" id="age" placeholder="21" required [(ngModel)]="age"/>
+            <br>
+            <br>
+            <label id="icon" for="email">E</label>
+            <input type="email" name="email" id="email" placeholder="abc@xyz.com" required [(ngModel)]="email"/>
+            <br>
+            <br>
+            <label id="icon" for="phoneNumber">P</label>
+            <input type="number" name="phoneNumber" id="phoneNumber" placeholder="9190xxxxxx" required [(ngModel)]="phoneNumber"/>
+            <br>
+            <br>
+            <label id="icon" for="workTimings">T</label>
+            <span style="margin-left: 15px; color: black;">FROM: </span> <input type="time" name="workTimingsFrom" id="workTimingsFrom" required [(ngModel)]="workTimingsFrom"/>
+            <span style="margin-left: 50px;  color: black;">TO: </span><input type="time" name="workTimingsTo" id="workTimingsTo" required [(ngModel)]="workTimingsTo"/>
+            <br>
+            <br>
+            <label id="icon" for="salary">S</label>
+            <input type="number" name="salary" id="salary" placeholder="25000" required [(ngModel)]="salary"/>
+            <br>
+            <br>
+            <label id="icon" for="designation">D</label>
+            <input type="text" name="designation" id="designation" placeholder="Client / Admin" required [(ngModel)]="designation"/>
+            <hr>
+            <div class="btn-block">
+                <div class="btn-group">
+                    <button class="btn btn-success" color="primary" (click)="addEmployee()">Save</button>
+                    <button class="btn btn-danger" color="warn" (click)="cancelEmployee()">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

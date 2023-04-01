@@ -1,0 +1,118 @@
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+	
+<input type="checkbox" id="checkbox">
+
+<header class="header">
+	<h2 class="u-name">
+		<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+		Supermarket Billing <b>Management</b>
+	</h2>
+	<i class="fa fa-user-o" aria-hidden="true"></i>
+</header>
+
+<div class="body">
+	<nav class="side-bar">
+		<div class="user-p">
+			<img src="../../../assets/admin.jpg">
+			<h4>Hello  admin</h4>
+		</div>
+		<ul>
+			<li routerLink="/admin-dashboard">
+				<a routerLink="/admin-dashboard">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					<span>Dashboard</span>
+				</a>
+			</li>
+			<li routerLink="/add-employee">
+				<a routerLink="/add-employee">
+					<i class="fa fa-user-circle"></i>
+					<span>Add Employee</span>
+				</a>
+			</li>
+			<li routerLink="/manage-employee">
+				<a routerLink="/manage-employee">
+					<i class="fa fa-users"></i>
+					<span>Manage Employees</span>
+				</a>
+			</li>
+			<li routerLink="/add-product">
+				<a routerLink="/add-product">
+					<i class="fa fa-plus"></i>
+					<span>Add Product</span>
+				</a>
+			</li>
+			<li href="/manage-inventory">
+				<a href="/manage-inventory">
+					<i class="fa fa-window-restore"></i>
+					<span>Inventory</span>
+				</a>
+			</li>
+			<!-- <li>
+				<a href="#">
+					<i class="fa fa-opencart"></i>
+					<span>Update Stock</span>
+				</a>
+			</li> -->
+			<li routerLink="/admin-dashboard">
+				<a routerLink="/admin-dashboard">
+					<i class="fa fa-area-chart"></i>
+					<span>Sales</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fa fa-power-off" aria-hidden="true"></i>
+					<span>Logout</span>
+				</a>
+			</li>
+		</ul>
+	</nav> 
+	<section class="cards">
+
+		<div class="inventory">
+            <div class="heading">
+                <h2><strong>Manage Inventory</strong> <button class="btn btn-success btn-lg add" routerLink="/add-product">+ Add Product</button></h2>
+            </div>
+        
+            <!-- <div class="search">
+                <label for="searchbox">
+                    Search a Product : &nbsp;  
+                </label>
+                <input type="search" id="#searchBox" [(ngModel)]="productId" placeholder="Enter Product Id">
+                <p>Product to search has id : {{productId}}</p>
+            </div> -->
+        
+            <div class="list">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <th>Product Id</th>
+                        <th>Product Name</th>
+                        <th>Manufacturer</th>
+                        <th>Cost (per item)</th>
+                        <th>Quantity available</th>
+                        <th>Description</th>
+                        <th>Rating</th>
+                        <th>Discount</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        <td>101</td>
+                        <td>Shirt</td>
+                        <td>Zara</td>
+                        <td>2500.00</td>
+                        <td>30</td>
+                        <td>Zara checked cotton full-sleves shirts</td>
+                        <td>8.4</td>
+                        <td>10%</td>
+                        <button class="btn btn-info btn-lg">Modify</button> &nbsp;
+                        <button class="btn btn-danger btn-lg">Delete</button>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+	</section>
+</div>

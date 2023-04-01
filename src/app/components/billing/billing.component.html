@@ -1,0 +1,130 @@
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+	
+<input type="checkbox" id="checkbox">
+
+<header class="header" style="max-height:80px;">
+	<h2 class="u-name">
+		<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+		Supermarket Billing <b>Management</b>
+	</h2>
+	<i class="fa fa-user-o" aria-hidden="true"></i>
+</header>
+
+<div class="body">
+	<nav class="side-bar">
+		<div class="user-p">
+			<img src="../../../assets/cashier.jpg">
+			<h4>Hello Employee</h4>
+		</div>
+		<ul>
+			<li routerLink="/employee-dashboard">
+				<a routerLink="/employee-dashboard">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					<span>Dashboard</span>
+				</a>
+			</li>
+			<li routerLink="/add-customer">
+				<a routerLink="/add-customer">
+					<i class="fa fa-user-circle"></i>
+					<span>Add Customer</span>
+				</a>
+			</li>
+			<li routerLink="/billing">
+				<a routerLink="/billing">
+					<i class="fa fa-users"></i>
+					<span>Generate Bill</span>
+				</a>
+			</li>
+			<li routerLink="/employee-inventory">
+				<a routerLink="/employee-inventory">
+					<i class="fa fa-window-restore"></i>
+					<span>View Inventory</span>
+				</a>
+			</li>
+			<li routerLink="/employee-dashboard">
+				<a routerLink="/employee-dashboard">
+					<i class="fa fa-area-chart"></i>
+					<span>View Orders</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fa fa-power-off" aria-hidden="true"></i>
+					<span>Logout</span>
+				</a>
+			</li>
+		</ul>
+	</nav> 
+	<section class="cards">
+		<div class="container-fluid">
+            <app-add-customer-form></app-add-customer-form>
+        </div>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead class="thead-dark">
+                    <th scope="col">ID</th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">DESCRIPTION</th>
+                    <th scope="col">PRICE</th>
+                    <th scope="col">QUANTITY REMAINING IN STOCK</th>
+                    <th scope="col">+</th>
+                    <th scope="col">-</th>
+                </thead>
+                <tbody *ngFor="let product of prod" scope="row">
+                    <td>{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{product.cost}}</td>
+                    <td>{{product.quantity}}</td>
+                    <td><button class="btn btn-primary" (click)="addToBilling(product)">ADD</button></td>
+                    <td><button class="btn btn-danger" (click)="remove(product)">remove</button></td>
+                </tbody>
+            </table>
+        </div>
+        <br/><br/>
+        
+        <div id="printable">
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>PRICE</th>
+                        <th>QUANTITY</th>
+                        <th>P * Q</th>
+                    </thead>
+                    <tbody *ngFor="let prt of products">
+                        <td>{{prt.id}}</td>
+                        <td>{{prt.name}}</td>
+                        <td>{{prt.cost}}</td>
+                        <td>{{prt.quantity}}</td>
+                        <td>{{prt.cost*prt.quantity}}</td>
+                        <td><button class="btn btn-primary"></button></td>
+                    </tbody>
+                </table>
+                <h1 class="my-5" style="color:black; font-size:2.5rem;">Grand Total: {{grandTotal}}</h1>
+            </div>
+        </div>
+        
+        <div>
+            <input type="button" value="PRINT RECEIPT" (click)="pushToTransaction()"/>
+        </div>
+        
+	</section>
+</div>
+<script type="text/javascript">
+    function printDiv(divName) {
+         var printContents = document.getElementById(divName).innerHTML;
+         var originalContents = document.body.innerHTML;
+    
+         document.body.innerHTML = printContents;
+         window.print();
+         document.body.innerHTML = originalContents;
+    }
+</script>
+
+
+

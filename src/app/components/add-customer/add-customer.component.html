@@ -1,0 +1,64 @@
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+	
+<input type="checkbox" id="checkbox">
+
+<header class="header">
+	<h2 class="u-name">
+		<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+		Supermarket Billing <b>Management</b>
+	</h2>
+	<i class="fa fa-user-o" aria-hidden="true"></i>
+</header>
+
+<div class="body">
+	<nav class="side-bar">
+		<div class="user-p">
+			<img src="../../../assets/cashier.jpg">
+			<h4>Hello Employee</h4>
+		</div>
+		<ul>
+			<li routerLink="/employee-dashboard">
+				<a routerLink="/employee-dashboard">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					<span>Dashboard</span>
+				</a>
+			</li>
+			<li routerLink="/add-customer">
+				<a routerLink="/add-customer">
+					<i class="fa fa-user-circle"></i>
+					<span>Add Customer</span>
+				</a>
+			</li>
+			<li routerLink="/billing">
+				<a routerLink="/billing">
+					<i class="fa fa-users"></i>
+					<span>Generate Bill</span>
+				</a>
+			</li>
+			<li routerLink="/employee-inventory">
+				<a routerLink="/employee-inventory">
+					<i class="fa fa-window-restore"></i>
+					<span>View Inventory</span>
+				</a>
+			</li>
+			<li routerLink="/employee-dashboard">
+				<a routerLink="/employee-dashboard">
+					<i class="fa fa-area-chart"></i>
+					<span>View Orders</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fa fa-power-off" aria-hidden="true"></i>
+					<span>Logout</span>
+				</a>
+			</li>
+		</ul>
+	</nav> 
+	<section class="cards">
+		<app-add-customer-form></app-add-customer-form>
+	</section>
+</div>
